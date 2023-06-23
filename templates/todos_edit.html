@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Edit ToDo</title>
+    <style>
+  body {
+    background-color: #FFECEF;
+  }
+
+
+
+    </style>
+
+    <style>
+         #edit {
+    background-color: #D9A3AD;
+    color: #000000;
+  }
+
+
+
+    </style>
+</head>
+
+
+<body class="background-color">
+
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+    <img src="{{ url_for('static', filename='edit.png') }}" class="rounded" alt="Logo"
+         style="width: 250px; height: 250px; margin-top: 60px; margin-bottom: 20px;">
+</div>
+
+<div class="mb-3" style="display: flex; justify-content: center; align-items: center;">
+    <form action="{{ url_for('todo_edit', todo_id=todo.id) }}" method="POST" id="create_todo">
+        <label for="create_todo" class="form-label d-block"><strong style="font-size: 20px;">☆ Description</strong>
+        </label>
+        <textarea class="form-control form-control-lg" placeholder="I want to..." name="create_todo" rows="5"
+                  style="width: 1200px; margin-top: 10px; resize: vertical;">{{ todo.create_todo}}</textarea>
+        <div class="d-grid gap-3 d-md-flex justify-content-md-end" style="margin-top: 10px;">
+            <button class="btn btn rounded-pill p-3 lh-3" type="submit" id="edit">Edit</button>
+            <a href="{{ url_for('todos') }}" class="btn btn-outline-dark rounded-pill p-3 lh-3" type="button">🗙</a>
+        </div>
+    </form>
+
+</div>
+
+
+</body>
+</html>
