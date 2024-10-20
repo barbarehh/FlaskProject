@@ -23,6 +23,8 @@ This project is a simple ToDo web application built with Flask, designed to help
 
 ## App in Action
 
-![App in Action 1](demo/one.gif)
-![App in Action 2](demo/two.gif)
+![App in Action 1](demo/one.png)
+![App in Action 2](demo/two.png)
+![App in Action 3](demo/three.jpg)
+
 
